@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça a história, estrutura, valores, missão e visão da Escola WATech. Mais de duas décadas de excelência em educação.">
+    <title>Sobre - Escola WATech</title>
+    
+    <!-- TailwindCSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Inter (tipografia moderna e legível) -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { 
+            font-family: 'Inter', sans-serif; 
+        }
+        * {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 antialiased">
+
+    <!-- ============================================
+         NAVBAR - Navegação Principal
+         ============================================ -->
+    <!-- Navbar fixa no topo com sombra suave e z-index alto -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50 backdrop-blur-sm bg-opacity-95">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo e Nome da Escola -->
+                <!-- EDITE AQUI: Altere o nome da escola e o ícone se necessário -->
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <i class="fas fa-graduation-cap text-blue-600 text-3xl group-hover:scale-110 transition-transform"></i>
+                    <span class="text-2xl font-bold text-gray-800">Escola WATech</span>
+                </a>
+                
+                <!-- Menu Desktop - Visível apenas em telas médias e grandes -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Home</a>
+                    <a href="sobre.html" class="text-blue-600 font-semibold border-b-2 border-blue-600 pb-1">Sobre</a>
+                    <a href="cursos.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Cursos</a>
+                    <a href="equipe.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Equipe</a>
+                    <a href="contato.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Contato</a>
+                </div>
+                
+                <!-- Botão Menu Mobile - Visível apenas em telas pequenas -->
+                <button class="md:hidden text-gray-700 hover:text-blue-600 transition-colors" id="mobileMenuBtn" aria-label="Abrir menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Menu Mobile - Dropdown que aparece ao clicar no botão hamburger -->
+            <div class="hidden md:hidden pb-4 border-t border-gray-200 mt-2" id="mobileMenu">
+                <a href="index.html" class="block py-3 text-gray-700 hover:text-blue-600 hover:pl-2 transition-all">Home</a>
+                <a href="sobre.html" class="block py-3 text-blue-600 font-semibold border-l-4 border-blue-600 pl-4">Sobre</a>
+                <a href="cursos.html" class="block py-3 text-gray-700 hover:text-blue-600 hover:pl-2 transition-all">Cursos</a>
+                <a href="equipe.html" class="block py-3 text-gray-700 hover:text-blue-600 hover:pl-2 transition-all">Equipe</a>
+                <a href="contato.html" class="block py-3 text-gray-700 hover:text-blue-600 hover:pl-2 transition-all">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION - Seção Principal
+         ============================================ -->
+    <section class="pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white relative overflow-hidden">
+        <!-- Decoração de fundo sutil -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-72 h-72 bg-yellow-400 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-blue-400 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 lg:px-8 text-center relative z-10">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Nossa História</h1>
+            <p class="text-xl md:text-2xl text-blue-100 max-w-2xl mx-auto">Conheça a trajetória da Escola WATech</p>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO HISTÓRIA DA ESCOLA
+         ============================================ -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <!-- Título da Seção -->
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">Uma História de Excelência</h2>
+                    <div class="w-32 h-1.5 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto rounded-full"></div>
+                </div>
+                
+                <!-- Conteúdo sobre a história -->
+                <!-- EDITE AQUI: Personalize o texto sobre a história da sua escola -->
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-6 text-center">
+                        Fundada em <strong class="text-blue-600">2000</strong>, a Escola WATech nasceu do sonho de oferecer uma educação de qualidade que preparasse os alunos não apenas para os exames, mas para a vida. Com uma visão inovadora e comprometida com a excelência, nossa instituição cresceu e se consolidou como referência em educação na região.
+                    </p>
+                    <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-6 text-center">
+                        Ao longo dos anos, investimos continuamente em infraestrutura, tecnologia e capacitação de nossos professores. Hoje, contamos com laboratórios modernos, biblioteca atualizada, quadras esportivas, espaços de convivência e salas de aula equipadas com recursos tecnológicos de última geração.
+                    </p>
+                    <p class="text-lg md:text-xl text-gray-700 leading-relaxed text-center">
+                        Nossa missão sempre foi formar cidadãos críticos, criativos e éticos, capazes de transformar a sociedade. Acreditamos que a educação vai além da transmissão de conhecimento - é sobre desenvolver habilidades, valores e competências que acompanharão nossos alunos por toda a vida.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO ESTRUTURA FÍSICA
+         ============================================ -->
+    <!-- Cards mostrando as instalações da escola -->
+    <!-- EDITE AQUI: Substitua os ícones por imagens reais das instalações -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">Nossa Estrutura</h2>
+                <div class="w-32 h-1.5 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Card Instalações -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all border border-gray-100">
+                    <div class="h-64 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-20">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-white rounded-full -mr-16 -mt-16"></div>
+                        </div>
+                        <i class="fas fa-building text-white text-6xl relative z-10"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Instalações Modernas</h3>
+                        <p class="text-gray-600 leading-relaxed">Salas de aula amplas e climatizadas, projetadas para o aprendizado.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-64 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                        <i class="fas fa-flask text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-gray-800 mb-2">Laboratórios</h3>
+                        <p class="text-gray-600 text-sm">Laboratórios de ciências, informática e robótica totalmente equipados.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-64 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                        <i class="fas fa-book text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-gray-800 mb-2">Biblioteca</h3>
+                        <p class="text-gray-600 text-sm">Espaço de leitura e pesquisa com acervo atualizado e ambiente acolhedor.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-64 bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center">
+                        <i class="fas fa-running text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-gray-800 mb-2">Quadras Esportivas</h3>
+                        <p class="text-gray-600 text-sm">Espaços para prática de esportes e atividades físicas.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-64 bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center">
+                        <i class="fas fa-laptop text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-gray-800 mb-2">Tecnologia</h3>
+                        <p class="text-gray-600 text-sm">Recursos digitais e plataformas educacionais integradas.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-64 bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center">
+                        <i class="fas fa-palette text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-gray-800 mb-2">Espaços Culturais</h3>
+                        <p class="text-gray-600 text-sm">Salas de arte, música e teatro para desenvolvimento criativo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO MISSÃO, VISÃO E VALORES
+         ============================================ -->
+    <!-- Cards com os pilares fundamentais da escola -->
+    <!-- EDITE AQUI: Personalize a missão, visão e valores conforme sua escola -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">Nossos Pilares</h2>
+                <div class="w-32 h-1.5 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 lg:gap-10 max-w-6xl mx-auto">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-bullseye text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Missão</h3>
+                    <p class="text-gray-700 text-center leading-relaxed">
+                        Proporcionar educação de excelência, formando cidadãos críticos, criativos e éticos, preparados para os desafios do mundo contemporâneo e comprometidos com a transformação social.
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-xl">
+                    <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-eye text-gray-900 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Visão</h3>
+                    <p class="text-gray-700 text-center leading-relaxed">
+                        Ser reconhecida como uma das melhores instituições de ensino da região, referência em inovação educacional e formação integral de estudantes.
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl">
+                    <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Valores</h3>
+                    <p class="text-gray-700 text-center leading-relaxed">
+                        Excelência, respeito, ética, inovação, comprometimento, trabalho em equipe e responsabilidade social são os valores que guiam todas as nossas ações.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO LINHA DO TEMPO
+         ============================================ -->
+    <!-- Timeline mostrando os marcos históricos da escola -->
+    <!-- EDITE AQUI: Adicione, remova ou modifique os eventos conforme a história da sua escola -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">Nossa Trajetória</h2>
+                <div class="w-32 h-1.5 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="relative">
+                    <!-- Linha vertical decorativa (visível apenas em desktop) -->
+                    <div class="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-200 via-blue-300 to-blue-200 hidden md:block rounded-full"></div>
+                    
+                    <!-- Eventos da linha do tempo -->
+                    <div class="space-y-12">
+                        <div class="relative flex items-start">
+                            <div class="absolute left-6 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-md hidden md:block"></div>
+                            <div class="ml-0 md:ml-16 bg-white p-6 rounded-xl shadow-md flex-1">
+                                <div class="text-blue-600 font-bold text-lg mb-2">2000</div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Fundação</h3>
+                                <p class="text-gray-600">A Escola WATech é fundada com a missão de oferecer educação de qualidade.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="relative flex items-start">
+                            <div class="absolute left-6 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-md hidden md:block"></div>
+                            <div class="ml-0 md:ml-16 bg-white p-6 rounded-xl shadow-md flex-1">
+                                <div class="text-blue-600 font-bold text-lg mb-2">2005</div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Expansão</h3>
+                                <p class="text-gray-600">Inauguração de novas instalações e ampliação da estrutura física.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="relative flex items-start">
+                            <div class="absolute left-6 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-md hidden md:block"></div>
+                            <div class="ml-0 md:ml-16 bg-white p-6 rounded-xl shadow-md flex-1">
+                                <div class="text-blue-600 font-bold text-lg mb-2">2010</div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Tecnologia</h3>
+                                <p class="text-gray-600">Implementação de laboratórios de informática e recursos digitais.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="relative flex items-start">
+                            <div class="absolute left-6 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-md hidden md:block"></div>
+                            <div class="ml-0 md:ml-16 bg-white p-6 rounded-xl shadow-md flex-1">
+                                <div class="text-blue-600 font-bold text-lg mb-2">2015</div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Reconhecimento</h3>
+                                <p class="text-gray-600">Primeiro lugar em avaliações regionais e reconhecimento de excelência.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="relative flex items-start">
+                            <div class="absolute left-6 w-4 h-4 bg-yellow-400 rounded-full border-4 border-white shadow-md hidden md:block"></div>
+                            <div class="ml-0 md:ml-16 bg-white p-6 rounded-xl shadow-md flex-1">
+                                <div class="text-blue-600 font-bold text-lg mb-2">2024</div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Presente</h3>
+                                <p class="text-gray-600">Continuamos inovando e formando gerações de alunos preparados para o futuro.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER - Rodapé
+         ============================================ -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Coluna 1: Logo e Descrição -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <i class="fas fa-graduation-cap text-yellow-400 text-3xl"></i>
+                        <span class="text-2xl font-bold">Escola WATech</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">Educação de excelência formando cidadãos preparados para o futuro.</p>
+                </div>
+                
+                <!-- Coluna 2: Links Rápidos -->
+                <div>
+                    <h4 class="font-bold text-lg mb-6 text-yellow-400">Links Rápidos</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="index.html" class="hover:text-yellow-400 transition-colors">Home</a></li>
+                        <li><a href="sobre.html" class="hover:text-yellow-400 transition-colors">Sobre</a></li>
+                        <li><a href="cursos.html" class="hover:text-yellow-400 transition-colors">Cursos</a></li>
+                        <li><a href="equipe.html" class="hover:text-yellow-400 transition-colors">Equipe</a></li>
+                        <li><a href="contato.html" class="hover:text-yellow-400 transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Coluna 3: Contato -->
+                <!-- EDITE AQUI: Atualize as informações de contato -->
+                <div>
+                    <h4 class="font-bold text-lg mb-6 text-yellow-400">Contato</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mr-3 mt-1 text-yellow-400"></i>
+                            <span>(11) 1234-5678</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mr-3 mt-1 text-yellow-400"></i>
+                            <span>contato@escolawatech.com.br</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-3 mt-1 text-yellow-400"></i>
+                            <span>Rua Exemplo, 123</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Coluna 4: Redes Sociais -->
+                <!-- EDITE AQUI: Atualize os links das redes sociais -->
+                <div>
+                    <h4 class="font-bold text-lg mb-6 text-yellow-400">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all hover:scale-110" aria-label="Facebook">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition-all hover:scale-110" aria-label="Instagram">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-all hover:scale-110" aria-label="YouTube">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Linha de Copyright -->
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; 2024 Escola WATech. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         BOTÃO WHATSAPP FLUTUANTE
+         ============================================ -->
+    <!-- EDITE AQUI: Altere o número do WhatsApp (formato: 5511999999999) -->
+    <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Escola%20WATech" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 transform hover:scale-110 transition-all z-50 animate-pulse hover:animate-none"
+       aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp text-3xl md:text-4xl"></i>
+    </a>
+
+    <!-- ============================================
+         SCRIPTS JAVASCRIPT
+         ============================================ -->
+    <script>
+        // Toggle do Menu Mobile
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+            
+            const icon = this.querySelector('i');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+        
+        // Fecha o menu mobile ao clicar em um link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.add('hidden');
+                const icon = document.querySelector('#mobileMenuBtn i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>
+

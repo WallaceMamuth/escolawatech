@@ -1,0 +1,232 @@
+# 🎓 Escola WATech - Site Estático
+
+Site estático completo para uma escola, desenvolvido com HTML e TailwindCSS, pronto para publicação no GitHub Pages.
+
+## 🚀 Como Rodar o Projeto Localmente
+
+### Opção 1: Usando npm (Recomendado) ⭐
+
+```bash
+# Navegue até a pasta do projeto
+cd C:\watechprojetos\EscolaWATech
+
+# Instale as dependências (opcional, mas recomendado na primeira vez)
+npm install
+
+# Inicie o servidor
+npm start
+```
+
+Depois, acesse no navegador: **http://localhost:3000**
+
+Para parar o servidor, pressione `Ctrl + C` no terminal.
+
+---
+
+### Opção 2: Abrir Diretamente no Navegador (Mais Simples)
+
+1. Navegue até a pasta do projeto
+2. Clique duas vezes no arquivo `index.html`
+3. O site abrirá no seu navegador padrão
+
+**Nota:** Alguns recursos podem não funcionar corretamente ao abrir diretamente (como links relativos). Use um servidor local para melhor experiência.
+
+---
+
+### Opção 3: Usando Python
+
+Se você tem Python instalado:
+
+#### Python 3.x:
+```bash
+# Navegue até a pasta do projeto
+cd C:\watechprojetos\EscolaWATech
+
+# Execute o servidor HTTP
+python -m http.server 8000
+```
+
+#### Python 2.x:
+```bash
+python -m SimpleHTTPServer 8000
+```
+
+Depois, acesse no navegador: **http://localhost:8000**
+
+Para parar o servidor, pressione `Ctrl + C` no terminal.
+
+---
+
+### Opção 4: Usando Node.js (npx serve diretamente)
+
+Se você tem Node.js instalado:
+
+```bash
+# Navegue até a pasta do projeto
+cd C:\watechprojetos\EscolaWATech
+
+# Execute o servidor
+npx serve
+```
+
+Ou instale globalmente:
+```bash
+npm install -g serve
+serve
+```
+
+Depois, acesse no navegador: **http://localhost:3000**
+
+---
+
+### Opção 5: Usando PHP
+
+Se você tem PHP instalado:
+
+```bash
+# Navegue até a pasta do projeto
+cd C:\watechprojetos\EscolaWATech
+
+# Execute o servidor
+php -S localhost:8000
+```
+
+Depois, acesse no navegador: **http://localhost:8000**
+
+---
+
+### Opção 6: Usando Live Server (VS Code Extension)
+
+1. Instale a extensão **Live Server** no VS Code
+2. Clique com o botão direito no arquivo `index.html`
+3. Selecione **"Open with Live Server"**
+4. O site abrirá automaticamente no navegador
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+EscolaWATech/
+├── index.html          # Página inicial
+├── sobre.html          # Página sobre a escola
+├── cursos.html         # Página de cursos/níveis
+├── equipe.html         # Página da equipe
+├── contato.html        # Página de contato
+├── components.js       # Componentes JavaScript compartilhados
+├── CONFIGURACAO.md     # Guia de personalização
+└── README.md          # Este arquivo
+```
+
+## 🎨 Características
+
+- ✅ Design moderno, clean e educacional
+- ✅ Totalmente responsivo (Mobile First)
+- ✅ Cores: azul, branco, cinza claro, com detalhes em amarelo
+- ✅ Tipografia moderna e legível (Inter)
+- ✅ Componentes reutilizáveis
+- ✅ Comentários detalhados em cada seção
+- ✅ Fácil de personalizar
+
+## 📝 Personalização
+
+Consulte o arquivo **CONFIGURACAO.md** para instruções detalhadas de personalização.
+
+### Informações Principais para Editar:
+
+- **Nome da escola**: Procure por `Escola WATech` em todos os arquivos
+- **Contato**: Procure por `(11) 1234-5678` e `contato@escolawatech.com.br`
+- **WhatsApp**: Procure por `5511999999999`
+- **Endereço**: Procure por `Rua Exemplo, 123`
+
+## 🌐 Publicação no GitHub Pages
+
+### Opção 1: Script Automático (Recomendado) ⭐
+
+Execute o script de deploy:
+
+**Windows:**
+```bash
+# Clique duas vezes no arquivo ou execute:
+deploy-github.bat
+```
+
+**Ou via PowerShell:**
+```powershell
+.\deploy-github.ps1
+```
+
+O script fará automaticamente:
+- ✅ Inicializar o repositório Git
+- ✅ Adicionar todos os arquivos
+- ✅ Fazer commit
+- ✅ Fazer push para o GitHub
+
+### Opção 2: Comandos Manuais
+
+```bash
+# Navegue até a pasta do projeto
+cd C:\watechprojetos\EscolaWATech
+
+# Inicialize o repositório (se ainda não foi feito)
+git init
+
+# Adicione o remote
+git remote add origin https://github.com/WallaceMamuth/escolawatech.git
+
+# Adicione todos os arquivos
+git add .
+
+# Faça o commit
+git commit -m "Initial commit: Site Escola WATech"
+
+# Configure a branch main
+git branch -M main
+
+# Faça o push
+git push -u origin main
+```
+
+### Ativar GitHub Pages:
+
+1. Acesse: https://github.com/WallaceMamuth/escolawatech
+2. Vá em **Settings** > **Pages**
+3. Em **Source**, selecione a branch `main`
+4. Clique em **Save**
+5. Seu site estará disponível em: **https://wallacemamuth.github.io/escolawatech/**
+
+⏱️ Pode levar alguns minutos para o site ficar disponível.
+
+## 🔧 Tecnologias Utilizadas
+
+- **HTML5** - Estrutura semântica
+- **TailwindCSS** - Estilização (via CDN)
+- **Font Awesome** - Ícones (via CDN)
+- **Google Fonts** - Tipografia (Inter)
+- **JavaScript** - Interatividade (menu mobile)
+- **Node.js/npm** - Gerenciamento de dependências e servidor local
+
+## 📱 Responsividade
+
+O site é totalmente responsivo e foi desenvolvido com abordagem Mobile First:
+- 📱 Mobile (320px - 768px)
+- 📱 Tablet (768px - 1024px)
+- 💻 Desktop (1024px+)
+
+## ✨ Componentes Incluídos
+
+- ✅ Navbar fixa e responsiva
+- ✅ Footer com links rápidos
+- ✅ Botão flutuante de WhatsApp
+- ✅ Cards modernos com hover effects
+- ✅ Seções com gradientes leves
+- ✅ Formulário de contato
+- ✅ Mapa estático (placeholder)
+
+## 📄 Licença
+
+Este projeto é de código aberto e pode ser usado livremente.
+
+---
+
+**Desenvolvido com ❤️ para a Escola WATech**

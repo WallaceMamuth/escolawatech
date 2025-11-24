@@ -1,0 +1,22 @@
+{
+  "name": "escola-watech",
+  "version": "1.0.0",
+  "description": "Site estático da Escola WATech - Educação de Excelência",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve . -p 3000",
+    "dev": "npx serve . -p 3000",
+    "serve": "npx serve . -p 3000"
+  },
+  "keywords": [
+    "escola",
+    "educação",
+    "site-estático",
+    "tailwindcss"
+  ],
+  "author": "Escola WATech",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
+

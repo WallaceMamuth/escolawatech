@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Escola WATech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-graduation-cap text-blue-600 text-2xl"></i>
+                    <span class="text-xl font-bold text-gray-800">Escola WATech</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="sobre.html" class="text-gray-700 hover:text-blue-600">Sobre</a>
+                    <a href="cursos.html" class="text-gray-700 hover:text-blue-600">Cursos</a>
+                    <a href="equipe.html" class="text-gray-700 hover:text-blue-600">Equipe</a>
+                    <a href="contato.html" class="text-blue-600 font-semibold hover:text-blue-800">Contato</a>
+                </div>
+                <button class="md:hidden text-gray-700" id="mobileMenuBtn">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <div class="hidden md:hidden pb-4" id="mobileMenu">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-blue-600">Home</a>
+                <a href="sobre.html" class="block py-2 text-gray-700 hover:text-blue-600">Sobre</a>
+                <a href="cursos.html" class="block py-2 text-gray-700 hover:text-blue-600">Cursos</a>
+                <a href="equipe.html" class="block py-2 text-gray-700 hover:text-blue-600">Equipe</a>
+                <a href="contato.html" class="block py-2 text-blue-600 font-semibold">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Entre em Contato</h1>
+            <p class="text-xl text-blue-100">Estamos prontos para responder suas dúvidas e agendar uma visita</p>
+        </div>
+    </section>
+
+    <!-- Formulário e Informações -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Formulário -->
+                <div>
+                    <div class="mb-6">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-2">Envie sua Mensagem</h2>
+                        <p class="text-gray-600">Preencha o formulário e entraremos em contato em até 24h</p>
+                    </div>
+                    
+                    <!-- Mensagem de Sucesso (oculta inicialmente) -->
+                    <div id="formSuccess" class="hidden bg-green-50 border-2 border-green-200 rounded-xl p-6 mb-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 text-2xl mr-3"></i>
+                            <div>
+                                <h3 class="font-bold text-green-800 mb-1">Mensagem Enviada com Sucesso!</h3>
+                                <p class="text-green-700 text-sm">Entraremos em contato em breve. Verifique seu WhatsApp!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form id="contactForm" class="space-y-5">
+                        <div>
+                            <label for="nome" class="block text-gray-700 font-semibold mb-2">
+                                Nome Completo <span class="text-red-500">*</span>
+                            </label>
+                            <input type="text" 
+                                   id="nome" 
+                                   name="nome" 
+                                   required
+                                   class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                                   placeholder="Digite seu nome completo">
+                            <p class="text-red-500 text-sm mt-1 hidden" id="nomeError"></p>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-gray-700 font-semibold mb-2">
+                                E-mail <span class="text-red-500">*</span>
+                            </label>
+                            <input type="email" 
+                                   id="email" 
+                                   name="email" 
+                                   required
+                                   class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                                   placeholder="seu@email.com">
+                            <p class="text-red-500 text-sm mt-1 hidden" id="emailError"></p>
+                        </div>
+                        
+                        <div>
+                            <label for="telefone" class="block text-gray-700 font-semibold mb-2">
+                                WhatsApp <span class="text-red-500">*</span>
+                            </label>
+                            <input type="tel" 
+                                   id="telefone" 
+                                   name="telefone" 
+                                   required
+                                   class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                                   placeholder="(11) 99999-9999">
+                            <p class="text-gray-500 text-xs mt-1">Usaremos para entrar em contato rapidamente</p>
+                            <p class="text-red-500 text-sm mt-1 hidden" id="telefoneError"></p>
+                        </div>
+                        
+                        <div>
+                            <label for="assunto" class="block text-gray-700 font-semibold mb-2">
+                                Assunto <span class="text-red-500">*</span>
+                            </label>
+                            <select id="assunto" 
+                                    name="assunto" 
+                                    required
+                                    class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all bg-white">
+                                <option value="">Selecione um assunto</option>
+                                <option value="matricula">Matrícula</option>
+                                <option value="visita">Agendar Visita</option>
+                                <option value="duvidas">Dúvidas sobre Cursos</option>
+                                <option value="financeiro">Informações Financeiras</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                            <p class="text-red-500 text-sm mt-1 hidden" id="assuntoError"></p>
+                        </div>
+                        
+                        <div>
+                            <label for="mensagem" class="block text-gray-700 font-semibold mb-2">
+                                Mensagem <span class="text-red-500">*</span>
+                            </label>
+                            <textarea id="mensagem" 
+                                      name="mensagem" 
+                                      rows="5" 
+                                      required
+                                      class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all resize-none"
+                                      placeholder="Conte-nos como podemos ajudar..."></textarea>
+                            <p class="text-gray-500 text-xs mt-1">Mínimo de 10 caracteres</p>
+                            <p class="text-red-500 text-sm mt-1 hidden" id="mensagemError"></p>
+                        </div>
+                        
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                            <p class="text-sm text-blue-800">
+                                <i class="fas fa-shield-alt text-blue-600 mr-2"></i>
+                                <strong>Seus dados estão seguros.</strong> Não compartilhamos informações com terceiros.
+                            </p>
+                        </div>
+                        
+                        <button type="submit" 
+                                id="submitBtn"
+                                class="w-full bg-blue-600 text-white py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transform hover:scale-105 transition-all shadow-xl hover:shadow-2xl disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none">
+                            <span id="btnText">
+                                <i class="fas fa-paper-plane mr-2"></i>Enviar Mensagem
+                            </span>
+                            <span id="btnLoading" class="hidden">
+                                <i class="fas fa-spinner fa-spin mr-2"></i>Enviando...
+                            </span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Informações de Contato -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Informações de Contato</h2>
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="font-semibold text-gray-800 mb-1">Endereço</h3>
+                                    <p class="text-gray-600">Rua Exemplo, 123<br>Bairro Centro<br>São Paulo - SP, 01234-567</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="font-semibold text-gray-800 mb-1">Telefone</h3>
+                                    <p class="text-gray-600">(11) 1234-5678</p>
+                                    <p class="text-gray-600">(11) 9876-5432</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fab fa-whatsapp text-white text-xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="font-semibold text-gray-800 mb-1">WhatsApp</h3>
+                                    <p class="text-gray-600 mb-2">(11) 99999-9999</p>
+                                    <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Escola%20WATech" 
+                                       target="_blank"
+                                       class="inline-block bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition text-sm">
+                                        Falar no WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="font-semibold text-gray-800 mb-1">E-mail</h3>
+                                    <p class="text-gray-600">contato@escolawatech.com.br</p>
+                                    <p class="text-gray-600">secretaria@escolawatech.com.br</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-clock text-white"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="font-semibold text-gray-800 mb-1">Horário de Atendimento</h3>
+                                    <p class="text-gray-600">Segunda a Sexta: 7h às 18h</p>
+                                    <p class="text-gray-600">Sábado: 8h às 12h</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa Estático -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nossa Localização</h2>
+                <div class="w-24 h-1 bg-yellow-400 mx-auto"></div>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <!-- Mapa estático usando uma imagem placeholder -->
+                    <div class="h-96 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center relative">
+                        <div class="text-center z-10">
+                            <i class="fas fa-map-marked-alt text-gray-400 text-6xl mb-4"></i>
+                            <p class="text-gray-600 font-semibold">Rua Exemplo, 123 - Bairro Centro</p>
+                            <p class="text-gray-500 text-sm mt-2">São Paulo - SP</p>
+                        </div>
+                        <!-- Overlay para simular um mapa -->
+                        <div class="absolute inset-0 bg-blue-600 opacity-10"></div>
+                    </div>
+                    <div class="p-6 bg-white">
+                        <p class="text-gray-600 text-center">
+                            <i class="fas fa-info-circle text-blue-600 mr-2"></i>
+                            Para visualizar o mapa completo, utilize o Google Maps ou outro serviço de navegação.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-graduation-cap text-yellow-400 text-2xl"></i>
+                        <span class="text-xl font-bold">Escola WATech</span>
+                    </div>
+                    <p class="text-gray-400">Educação de excelência formando cidadãos preparados para o futuro.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
+                        <li><a href="sobre.html" class="hover:text-yellow-400">Sobre</a></li>
+                        <li><a href="cursos.html" class="hover:text-yellow-400">Cursos</a></li>
+                        <li><a href="equipe.html" class="hover:text-yellow-400">Equipe</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i>(11) 1234-5678</li>
+                        <li><i class="fas fa-envelope mr-2"></i>contato@escolawatech.com.br</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Rua Exemplo, 123</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-yellow-400"><i class="fab fa-facebook text-2xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400"><i class="fab fa-instagram text-2xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400"><i class="fab fa-youtube text-2xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Escola WATech. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Escola%20WATech" 
+       target="_blank" 
+       class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition z-50">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script>
+        // Menu Mobile
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+            
+            const icon = this.querySelector('i');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+        
+        // Máscara para telefone
+        const telefoneInput = document.getElementById('telefone');
+        if (telefoneInput) {
+            telefoneInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length <= 11) {
+                    if (value.length <= 10) {
+                        value = value.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, '($1) $2-$3');
+                    } else {
+                        value = value.replace(/^(\d{2})(\d{5})(\d{0,4}).*/, '($1) $2-$3');
+                    }
+                    e.target.value = value;
+                }
+            });
+        }
+        
+        // Validação e envio do formulário
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Remove erros anteriores
+                document.querySelectorAll('[id$="Error"]').forEach(el => {
+                    el.classList.add('hidden');
+                    el.textContent = '';
+                });
+                
+                // Validação
+                const nome = document.getElementById('nome').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const telefone = document.getElementById('telefone').value.trim();
+                const assunto = document.getElementById('assunto').value;
+                const mensagem = document.getElementById('mensagem').value.trim();
+                
+                let isValid = true;
+                
+                // Validação de nome
+                if (nome.length < 3) {
+                    showError('nomeError', 'Nome deve ter pelo menos 3 caracteres');
+                    isValid = false;
+                }
+                
+                // Validação de email
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    showError('emailError', 'E-mail inválido');
+                    isValid = false;
+                }
+                
+                // Validação de telefone
+                const telefoneLimpo = telefone.replace(/\D/g, '');
+                if (telefoneLimpo.length < 10) {
+                    showError('telefoneError', 'Telefone inválido');
+                    isValid = false;
+                }
+                
+                // Validação de assunto
+                if (!assunto) {
+                    showError('assuntoError', 'Selecione um assunto');
+                    isValid = false;
+                }
+                
+                // Validação de mensagem
+                if (mensagem.length < 10) {
+                    showError('mensagemError', 'Mensagem deve ter pelo menos 10 caracteres');
+                    isValid = false;
+                }
+                
+                if (!isValid) {
+                    return;
+                }
+                
+                // Mostra loading
+                const btnText = document.getElementById('btnText');
+                const btnLoading = document.getElementById('btnLoading');
+                const submitBtn = document.getElementById('submitBtn');
+                
+                btnText.classList.add('hidden');
+                btnLoading.classList.remove('hidden');
+                submitBtn.disabled = true;
+                
+                // Simula envio (substitua por integração real)
+                setTimeout(() => {
+                    // Aqui você integraria com seu backend/API
+                    // Exemplo: 
+                    // fetch('/api/contato', {
+                    //     method: 'POST',
+                    //     headers: { 'Content-Type': 'application/json' },
+                    //     body: JSON.stringify({ nome, email, telefone, assunto, mensagem })
+                    // })
+                    
+                    console.log('Formulário enviado:', { nome, email, telefone, assunto, mensagem });
+                    
+                    // Esconde formulário e mostra sucesso
+                    contactForm.classList.add('hidden');
+                    document.getElementById('formSuccess').classList.remove('hidden');
+                    
+                    // Opcional: Redireciona para WhatsApp
+                    setTimeout(() => {
+                        const whatsappMsg = encodeURIComponent(`Olá! Meu nome é ${nome}. ${mensagem}`);
+                        window.open(`https://wa.me/5511999999999?text=${whatsappMsg}`, '_blank');
+                    }, 2000);
+                }, 1500);
+            });
+        }
+        
+        function showError(errorId, message) {
+            const errorEl = document.getElementById(errorId);
+            if (errorEl) {
+                errorEl.textContent = message;
+                errorEl.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
+

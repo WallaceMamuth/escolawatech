@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipe - Escola WATech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-graduation-cap text-blue-600 text-2xl"></i>
+                    <span class="text-xl font-bold text-gray-800">Escola WATech</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="sobre.html" class="text-gray-700 hover:text-blue-600">Sobre</a>
+                    <a href="cursos.html" class="text-gray-700 hover:text-blue-600">Cursos</a>
+                    <a href="equipe.html" class="text-blue-600 font-semibold hover:text-blue-800">Equipe</a>
+                    <a href="contato.html" class="text-gray-700 hover:text-blue-600">Contato</a>
+                </div>
+                <button class="md:hidden text-gray-700" id="mobileMenuBtn">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <div class="hidden md:hidden pb-4" id="mobileMenu">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-blue-600">Home</a>
+                <a href="sobre.html" class="block py-2 text-gray-700 hover:text-blue-600">Sobre</a>
+                <a href="cursos.html" class="block py-2 text-gray-700 hover:text-blue-600">Cursos</a>
+                <a href="equipe.html" class="block py-2 text-blue-600 font-semibold">Equipe</a>
+                <a href="contato.html" class="block py-2 text-gray-700 hover:text-blue-600">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Nossa Equipe</h1>
+            <p class="text-xl text-blue-100">Profissionais dedicados e qualificados comprometidos com a educação</p>
+        </div>
+    </section>
+
+    <!-- Direção -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Direção</h2>
+                <div class="w-24 h-1 bg-yellow-400 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
+                        <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center">
+                            <i class="fas fa-user-tie text-blue-600 text-5xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Carlos Mendes</h3>
+                        <p class="text-blue-600 font-semibold mb-4">Diretor Geral</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Pedagogo com mais de 20 anos de experiência em gestão educacional. Mestre em Educação pela USP, lidera a escola com foco em inovação e excelência acadêmica.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
+                        <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center">
+                            <i class="fas fa-user-tie text-blue-600 text-5xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Ana Paula Silva</h3>
+                        <p class="text-blue-600 font-semibold mb-4">Coordenadora Pedagógica</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Especialista em Metodologias Ativas e Psicopedagogia. Responsável pelo desenvolvimento e implementação de projetos pedagógicos inovadores.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professores -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Corpo Docente</h2>
+                <div class="w-24 h-1 bg-yellow-400 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- Professor 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="bg-gradient-to-br from-green-400 to-green-500 h-40 flex items-center justify-center">
+                        <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center">
+                            <i class="fas fa-chalkboard-teacher text-green-600 text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 text-center">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Roberto Alves</h3>
+                        <p class="text-green-600 font-semibold text-sm mb-3">Matemática</p>
+                        <p class="text-gray-600 text-xs leading-relaxed">
+                            Licenciado em Matemática, especialista em Ensino de Ciências Exatas. Mais de 15 anos de experiência.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Professor 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="bg-gradient-to-br from-red-400 to-red-500 h-40 flex items-center justify-center">
+                        <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center">
+                            <i class="fas fa-chalkboard-teacher text-red-600 text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 text-center">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Mariana Costa</h3>
+                        <p class="text-red-600 font-semibold text-sm mb-3">Língua Portuguesa</p>
+                        <p class="text-gray-600 text-xs leading-relaxed">
+                            Mestra em Literatura Brasileira. Especialista em produção textual e preparação para vestibulares.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Professor 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="bg-gradient-to-br from-blue-400 to-blue-500 h-40 flex items-center justify-center">
+                        <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center">
+                            <i class="fas fa-chalkboard-teacher text-blue-600 text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 text-center">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Fernando Santos</h3>
+                        <p class="text-blue-600 font-semibold text-sm mb-3">Física</p>
+                        <p class="text-gray-600 text-xs leading-relaxed">
+                            Doutor em Física Aplicada. Experiência em ensino de ciências e preparação para olimpíadas.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Professor 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="bg-gradient-to-br from-yellow-400 to-yellow-500 h-40 flex items-center justify-center">
+                        <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center">
+                            <i class="fas fa-chalkboard-teacher text-yellow-600 text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 text-center">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Juliana Oliveira</h3>
+                        <p class="text-yellow-600 font-semibold text-sm mb-3">História</p>
+                        <p class="text-gray-600 text-xs leading-relaxed">
+                            Historiadora com especialização em História Contemporânea. Metodologias ativas e projetos interdisciplinares.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Professor 5 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="bg-gradient-to-br from-purple-400 to-purple-500 h-40 flex items-center justify-center">
+                        <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center">
+                            <i class="fas fa-chalkboard-teacher text-purple-600 text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 text-center">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Paulo Ribeiro</h3>
+                        <p class="text-purple-600 font-semibold text-sm mb-3">Química</p>
+                        <p class="text-gray-600 text-xs leading-relaxed">
+                            Químico Industrial, mestre em Ensino de Ciências. Foco em experimentação e laboratório.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Professor 6 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="bg-gradient-to-br from-indigo-400 to-indigo-500 h-40 flex items-center justify-center">
+                        <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center">
+                            <i class="fas fa-chalkboard-teacher text-indigo-600 text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 text-center">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Patrícia Lima</h3>
+                        <p class="text-indigo-600 font-semibold text-sm mb-3">Biologia</p>
+                        <p class="text-gray-600 text-xs leading-relaxed">
+                            Bióloga, especialista em Educação Ambiental. Desenvolve projetos de sustentabilidade e ciências naturais.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Professor 7 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="bg-gradient-to-br from-pink-400 to-pink-500 h-40 flex items-center justify-center">
+                        <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center">
+                            <i class="fas fa-chalkboard-teacher text-pink-600 text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 text-center">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Ricardo Martins</h3>
+                        <p class="text-pink-600 font-semibold text-sm mb-3">Geografia</p>
+                        <p class="text-gray-600 text-xs leading-relaxed">
+                            Geógrafo com mestrado em Geografia Humana. Trabalha com cartografia digital e estudos regionais.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Professor 8 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="bg-gradient-to-br from-teal-400 to-teal-500 h-40 flex items-center justify-center">
+                        <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center">
+                            <i class="fas fa-chalkboard-teacher text-teal-600 text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 text-center">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Camila Ferreira</h3>
+                        <p class="text-teal-600 font-semibold text-sm mb-3">Inglês</p>
+                        <p class="text-gray-600 text-xs leading-relaxed">
+                            Professora de Inglês certificada (CELTA). Experiência internacional e metodologia comunicativa.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Professor 9 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="bg-gradient-to-br from-orange-400 to-orange-500 h-40 flex items-center justify-center">
+                        <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center">
+                            <i class="fas fa-chalkboard-teacher text-orange-600 text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 text-center">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Lucas Souza</h3>
+                        <p class="text-orange-600 font-semibold text-sm mb-3">Educação Física</p>
+                        <p class="text-gray-600 text-xs leading-relaxed">
+                            Educador Físico, especialista em Esportes Escolares. Coordena equipes esportivas e atividades físicas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Conheça Nossa Equipe de Perto</h2>
+            <p class="text-xl mb-8 text-blue-100">Agende uma visita e conheça nossos profissionais</p>
+            <a href="contato.html" class="inline-block bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-500 transition shadow-lg hover:shadow-xl">
+                Agende uma Visita
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-graduation-cap text-yellow-400 text-2xl"></i>
+                        <span class="text-xl font-bold">Escola WATech</span>
+                    </div>
+                    <p class="text-gray-400">Educação de excelência formando cidadãos preparados para o futuro.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
+                        <li><a href="sobre.html" class="hover:text-yellow-400">Sobre</a></li>
+                        <li><a href="cursos.html" class="hover:text-yellow-400">Cursos</a></li>
+                        <li><a href="equipe.html" class="hover:text-yellow-400">Equipe</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i>(11) 1234-5678</li>
+                        <li><i class="fas fa-envelope mr-2"></i>contato@escolawatech.com.br</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Rua Exemplo, 123</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-yellow-400"><i class="fab fa-facebook text-2xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400"><i class="fab fa-instagram text-2xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400"><i class="fab fa-youtube text-2xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Escola WATech. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Escola%20WATech" 
+       target="_blank" 
+       class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition z-50">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script>
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
+

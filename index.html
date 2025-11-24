@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Escola WATech - Educação de Excelência. Oferecemos Educação Infantil, Ensino Fundamental e Ensino Médio com metodologias modernas e professores qualificados.">
+    <title>Escola WATech - Educação de Excelência</title>
+    
+    <!-- TailwindCSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Inter (tipografia moderna e legível) -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { 
+            font-family: 'Inter', sans-serif; 
+        }
+        /* Animações suaves para elementos premium */
+        * {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 antialiased">
+
+    <!-- ============================================
+         NAVBAR - Navegação Principal
+         ============================================ -->
+    <!-- Navbar fixa no topo com sombra suave e z-index alto para ficar sobre outros elementos -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50 backdrop-blur-sm bg-opacity-95">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo e Nome da Escola -->
+                <!-- EDITE AQUI: Altere o nome da escola e o ícone se necessário -->
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <i class="fas fa-graduation-cap text-blue-600 text-3xl group-hover:scale-110 transition-transform"></i>
+                    <span class="text-2xl font-bold text-gray-800">Escola WATech</span>
+                </a>
+                
+                <!-- Menu Desktop - Visível apenas em telas médias e grandes -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-blue-600 font-semibold border-b-2 border-blue-600 pb-1">Home</a>
+                    <a href="sobre.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Sobre</a>
+                    <a href="cursos.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Cursos</a>
+                    <a href="equipe.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Equipe</a>
+                    <a href="contato.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Contato</a>
+                </div>
+                
+                <!-- Botão Menu Mobile - Visível apenas em telas pequenas -->
+                <button class="md:hidden text-gray-700 hover:text-blue-600 transition-colors" id="mobileMenuBtn" aria-label="Abrir menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Menu Mobile - Dropdown que aparece ao clicar no botão hamburger -->
+            <div class="hidden md:hidden pb-4 border-t border-gray-200 mt-2" id="mobileMenu">
+                <a href="index.html" class="block py-3 text-blue-600 font-semibold border-l-4 border-blue-600 pl-4">Home</a>
+                <a href="sobre.html" class="block py-3 text-gray-700 hover:text-blue-600 hover:pl-2 transition-all">Sobre</a>
+                <a href="cursos.html" class="block py-3 text-gray-700 hover:text-blue-600 hover:pl-2 transition-all">Cursos</a>
+                <a href="equipe.html" class="block py-3 text-gray-700 hover:text-blue-600 hover:pl-2 transition-all">Equipe</a>
+                <a href="contato.html" class="block py-3 text-gray-700 hover:text-blue-600 hover:pl-2 transition-all">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION - Seção Principal de Destaque
+         ============================================ -->
+    <!-- Hero com gradiente azul premium e padding-top para compensar navbar fixa -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-24 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white relative overflow-hidden">
+        <!-- Decoração de fundo sutil -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-72 h-72 bg-yellow-400 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-blue-400 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 lg:px-8 text-center relative z-10">
+            <!-- Título Principal -->
+            <!-- EDITE AQUI: Altere o título e subtítulo conforme sua escola -->
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                Educação de Excelência<br>para o Futuro
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto leading-relaxed">
+                Formando cidadãos preparados para os desafios do amanhã
+            </p>
+            
+            <!-- Formulário Rápido de Captação de Leads -->
+            <!-- Formulário curto para capturar leads imediatamente -->
+            <div class="max-w-md mx-auto bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-white/20 shadow-2xl">
+                <p class="text-white font-semibold mb-4 text-lg">
+                    <i class="fas fa-gift text-yellow-400 mr-2"></i>Receba informações exclusivas
+                </p>
+                <form id="heroForm" class="space-y-4">
+                    <div>
+                        <input type="text" 
+                               id="heroNome" 
+                               name="nome" 
+                               placeholder="Seu nome completo" 
+                               required
+                               class="w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-yellow-400 outline-none">
+                    </div>
+                    <div>
+                        <input type="tel" 
+                               id="heroTelefone" 
+                               name="telefone" 
+                               placeholder="Seu WhatsApp" 
+                               required
+                               class="w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-yellow-400 outline-none">
+                    </div>
+                    <button type="submit" 
+                            id="heroSubmitBtn"
+                            class="w-full bg-yellow-400 text-gray-900 py-3 px-6 rounded-lg font-bold text-lg hover:bg-yellow-500 transform hover:scale-105 transition-all shadow-xl">
+                        <span id="heroBtnText">
+                            <i class="fas fa-paper-plane mr-2"></i>Quero Saber Mais
+                        </span>
+                        <span id="heroBtnLoading" class="hidden">
+                            <i class="fas fa-spinner fa-spin mr-2"></i>Enviando...
+                        </span>
+                    </button>
+                    <p class="text-xs text-blue-200 text-center">
+                        <i class="fas fa-lock mr-1"></i>Seus dados estão seguros. Não enviamos spam.
+                    </p>
+                </form>
+                <div id="heroSuccess" class="hidden text-center text-white">
+                    <i class="fas fa-check-circle text-green-400 text-4xl mb-2"></i>
+                    <p class="font-bold text-lg">Obrigado! Entraremos em contato em breve.</p>
+                </div>
+            </div>
+            
+            <!-- Botão CTA Secundário -->
+            <div class="mt-6">
+                <a href="sobre.html" 
+                   class="inline-block text-white border-2 border-white px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all">
+                    <i class="fas fa-info-circle mr-2"></i>Conheça Mais Sobre Nós
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO PROVA SOCIAL - NÚMEROS E ESTATÍSTICAS
+         ============================================ -->
+    <!-- Números que comprovam a qualidade da escola -->
+    <section class="py-16 bg-gradient-to-br from-blue-50 to-white border-y border-blue-100">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
+                <!-- Estatística 1 -->
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-blue-600 mb-2">24+</div>
+                    <p class="text-gray-600 text-sm md:text-base">Anos de Experiência</p>
+                </div>
+                <!-- Estatística 2 -->
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-blue-600 mb-2">95%</div>
+                    <p class="text-gray-600 text-sm md:text-base">Taxa de Aprovação</p>
+                </div>
+                <!-- Estatística 3 -->
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-blue-600 mb-2">2000+</div>
+                    <p class="text-gray-600 text-sm md:text-base">Alunos Formados</p>
+                </div>
+                <!-- Estatística 4 -->
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-blue-600 mb-2">50+</div>
+                    <p class="text-gray-600 text-sm md:text-base">Professores Qualificados</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO SOBRE A ESCOLA
+         ============================================ -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <!-- Título da Seção com linha decorativa -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">Sobre a Escola</h2>
+                <div class="w-32 h-1.5 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <!-- Conteúdo sobre a escola -->
+            <!-- EDITE AQUI: Personalize o texto sobre sua escola -->
+            <div class="max-w-4xl mx-auto">
+                <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-6 text-center">
+                    A <strong class="text-blue-600">Escola WATech</strong> é uma instituição de ensino comprometida com a excelência educacional e a formação integral de nossos alunos. Com mais de duas décadas de experiência, oferecemos uma educação moderna, inovadora e humanizada.
+                </p>
+                <p class="text-lg md:text-xl text-gray-700 leading-relaxed text-center">
+                    Nossa proposta pedagógica combina tradição e inovação, preparando estudantes para enfrentar os desafios do mundo contemporâneo com confiança, criatividade e valores sólidos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO VALORES E MISSÃO
+         ============================================ -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <!-- Título da Seção -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">Nossos Valores</h2>
+                <div class="w-32 h-1.5 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <!-- Cards de Valores -->
+            <!-- EDITE AQUI: Adicione, remova ou modifique os valores conforme sua escola -->
+            <div class="grid md:grid-cols-3 gap-8 lg:gap-10 max-w-6xl mx-auto">
+                <!-- Card Valor 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all text-center border border-gray-100">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-heart text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Excelência</h3>
+                    <p class="text-gray-600 leading-relaxed">Compromisso com a qualidade em todos os aspectos do ensino e aprendizagem.</p>
+                </div>
+                
+                <!-- Card Valor 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all text-center border border-gray-100">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-users text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Respeito</h3>
+                    <p class="text-gray-600 leading-relaxed">Valorização da diversidade e promoção de um ambiente acolhedor e inclusivo.</p>
+                </div>
+                
+                <!-- Card Valor 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all text-center border border-gray-100">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-lightbulb text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Inovação</h3>
+                    <p class="text-gray-600 leading-relaxed">Uso de metodologias modernas e tecnologias educacionais de ponta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO DIFERENCIAIS
+         ============================================ -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <!-- Título da Seção -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">Nossos Diferenciais</h2>
+                <div class="w-32 h-1.5 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <!-- Grid de Diferenciais -->
+            <!-- EDITE AQUI: Modifique os diferenciais conforme sua escola -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-7xl mx-auto">
+                <!-- Diferencial 1 -->
+                <div class="bg-gradient-to-br from-blue-50 via-blue-100 to-blue-50 p-8 rounded-2xl hover:shadow-xl transition-all border border-blue-100">
+                    <div class="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                        <i class="fas fa-chalkboard-teacher text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Professores Qualificados</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Corpo docente especializado e em constante atualização.</p>
+                </div>
+                
+                <!-- Diferencial 2 -->
+                <div class="bg-gradient-to-br from-blue-50 via-blue-100 to-blue-50 p-8 rounded-2xl hover:shadow-xl transition-all border border-blue-100">
+                    <div class="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                        <i class="fas fa-laptop text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Tecnologia Educacional</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Laboratórios modernos e recursos digitais avançados.</p>
+                </div>
+                
+                <!-- Diferencial 3 -->
+                <div class="bg-gradient-to-br from-blue-50 via-blue-100 to-blue-50 p-8 rounded-2xl hover:shadow-xl transition-all border border-blue-100">
+                    <div class="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                        <i class="fas fa-book-reader text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Metodologia Ativa</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Aprendizagem baseada em projetos e resolução de problemas.</p>
+                </div>
+                
+                <!-- Diferencial 4 -->
+                <div class="bg-gradient-to-br from-blue-50 via-blue-100 to-blue-50 p-8 rounded-2xl hover:shadow-xl transition-all border border-blue-100">
+                    <div class="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                        <i class="fas fa-trophy text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Alto Desempenho</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Resultados consistentes em avaliações e competições.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO NÍVEIS DE ENSINO
+         ============================================ -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <!-- Título da Seção -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">Níveis de Ensino</h2>
+                <div class="w-32 h-1.5 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <!-- Cards de Níveis de Ensino -->
+            <!-- EDITE AQUI: Modifique os níveis de ensino conforme sua escola oferece -->
+            <div class="grid md:grid-cols-3 gap-8 lg:gap-10 max-w-7xl mx-auto">
+                <!-- Card Educação Infantil -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all border border-gray-100">
+                    <!-- Cabeçalho do Card com gradiente -->
+                    <div class="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 p-10 text-white text-center relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-20">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-white rounded-full -mr-16 -mt-16"></div>
+                        </div>
+                        <div class="relative z-10">
+                            <i class="fas fa-baby text-5xl mb-4"></i>
+                            <h3 class="text-2xl md:text-3xl font-bold">Educação Infantil</h3>
+                        </div>
+                    </div>
+                    <!-- Conteúdo do Card -->
+                    <div class="p-8">
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Desenvolvimento integral da criança através de atividades lúdicas e criativas, estimulando o aprendizado e a socialização.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 text-lg mr-3 mt-0.5 flex-shrink-0"></i>
+                                <span>Ambiente acolhedor e seguro</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 text-lg mr-3 mt-0.5 flex-shrink-0"></i>
+                                <span>Atividades lúdicas e criativas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 text-lg mr-3 mt-0.5 flex-shrink-0"></i>
+                                <span>Desenvolvimento socioemocional</span>
+                            </li>
+                        </ul>
+                        <a href="cursos.html" class="block text-center bg-blue-600 text-white py-3 px-6 rounded-xl font-semibold hover:bg-blue-700 transform hover:scale-105 transition-all shadow-lg">
+                            Saiba Mais
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Card Ensino Fundamental -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all border border-gray-100">
+                    <div class="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 p-10 text-white text-center relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-20">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-white rounded-full -mr-16 -mt-16"></div>
+                        </div>
+                        <div class="relative z-10">
+                            <i class="fas fa-book text-5xl mb-4"></i>
+                            <h3 class="text-2xl md:text-3xl font-bold">Ensino Fundamental</h3>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Formação sólida nas áreas do conhecimento, desenvolvendo habilidades cognitivas, críticas e criativas essenciais.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 text-lg mr-3 mt-0.5 flex-shrink-0"></i>
+                                <span>Base curricular forte</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 text-lg mr-3 mt-0.5 flex-shrink-0"></i>
+                                <span>Projetos interdisciplinares</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 text-lg mr-3 mt-0.5 flex-shrink-0"></i>
+                                <span>Preparação para o futuro</span>
+                            </li>
+                        </ul>
+                        <a href="cursos.html" class="block text-center bg-blue-600 text-white py-3 px-6 rounded-xl font-semibold hover:bg-blue-700 transform hover:scale-105 transition-all shadow-lg">
+                            Saiba Mais
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Card Ensino Médio -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all border border-gray-100">
+                    <div class="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 p-10 text-white text-center relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-20">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-white rounded-full -mr-16 -mt-16"></div>
+                        </div>
+                        <div class="relative z-10">
+                            <i class="fas fa-graduation-cap text-5xl mb-4"></i>
+                            <h3 class="text-2xl md:text-3xl font-bold">Ensino Médio</h3>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Preparação completa para o ENEM e vestibulares, com foco em excelência acadêmica e desenvolvimento de competências.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 text-lg mr-3 mt-0.5 flex-shrink-0"></i>
+                                <span>Preparação para ENEM</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 text-lg mr-3 mt-0.5 flex-shrink-0"></i>
+                                <span>Orientação vocacional</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 text-lg mr-3 mt-0.5 flex-shrink-0"></i>
+                                <span>Projetos de extensão</span>
+                            </li>
+                        </ul>
+                        <a href="cursos.html" class="block text-center bg-blue-600 text-white py-3 px-6 rounded-xl font-semibold hover:bg-blue-700 transform hover:scale-105 transition-all shadow-lg">
+                            Saiba Mais
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO DEPOIMENTOS
+         ============================================ -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <!-- Título da Seção -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">O Que Dizem Sobre Nós</h2>
+                <div class="w-32 h-1.5 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <!-- Cards de Depoimentos -->
+            <!-- EDITE AQUI: Substitua pelos depoimentos reais de pais e alunos -->
+            <div class="grid md:grid-cols-3 gap-8 lg:gap-10 max-w-7xl mx-auto">
+                <!-- Depoimento 1 -->
+                <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4 shadow-lg">
+                            MC
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 text-lg">Maria Costa</h4>
+                            <p class="text-sm text-gray-600">Mãe de aluno</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic leading-relaxed mb-4">
+                        "A Escola WATech superou todas as nossas expectativas. Meu filho desenvolveu não apenas academicamente, mas também como pessoa. Recomendo de coração!"
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 2 -->
+                <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4 shadow-lg">
+                            JS
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 text-lg">João Silva</h4>
+                            <p class="text-sm text-gray-600">Ex-aluno</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic leading-relaxed mb-4">
+                        "A preparação que recebi no Ensino Médio foi fundamental para minha aprovação na universidade. Os professores são excepcionais e a metodologia é realmente eficaz."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 3 -->
+                <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4 shadow-lg">
+                            AS
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 text-lg">Ana Santos</h4>
+                            <p class="text-sm text-gray-600">Mãe de aluna</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic leading-relaxed mb-4">
+                        "A atenção individualizada e o cuidado com cada aluno fazem toda a diferença. Minha filha adora ir à escola e está sempre animada para aprender."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CTA FINAL - Call to Action com Urgência
+         ============================================ -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white relative overflow-hidden">
+        <!-- Decoração de fundo -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-yellow-400 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-400 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 lg:px-8 text-center relative z-10">
+            <!-- Badge de Urgência -->
+            <div class="inline-block bg-yellow-400 text-gray-900 px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
+                <i class="fas fa-fire mr-1"></i>Matrículas Abertas - Vagas Limitadas
+            </div>
+            
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Venha Conhecer Nossa Escola</h2>
+            <p class="text-xl md:text-2xl mb-6 text-blue-100 max-w-2xl mx-auto">
+                Agende uma visita e descubra como podemos fazer parte da educação do seu filho
+            </p>
+            
+            <!-- Benefícios Rápidos -->
+            <div class="flex flex-wrap justify-center gap-4 mb-8 text-sm md:text-base">
+                <div class="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                    <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+                    <span>Visita Gratuita</span>
+                </div>
+                <div class="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                    <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+                    <span>Sem Compromisso</span>
+                </div>
+                <div class="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                    <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+                    <span>Atendimento Personalizado</span>
+                </div>
+            </div>
+            
+            <!-- CTAs Duplos -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="contato.html" 
+                   class="inline-block bg-yellow-400 text-gray-900 px-10 py-4 rounded-xl font-bold text-lg hover:bg-yellow-500 transform hover:scale-105 transition-all shadow-2xl hover:shadow-yellow-400/50 w-full sm:w-auto text-center">
+                    <i class="fas fa-calendar-check mr-2"></i>Agende uma Visita
+                </a>
+                <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita%20à%20Escola%20WATech" 
+                   target="_blank"
+                   class="inline-block bg-green-500 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-green-600 transform hover:scale-105 transition-all shadow-2xl w-full sm:w-auto text-center">
+                    <i class="fab fa-whatsapp mr-2"></i>Falar no WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER - Rodapé
+         ============================================ -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Coluna 1: Logo e Descrição -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <i class="fas fa-graduation-cap text-yellow-400 text-3xl"></i>
+                        <span class="text-2xl font-bold">Escola WATech</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Educação de excelência formando cidadãos preparados para o futuro.
+                    </p>
+                </div>
+                
+                <!-- Coluna 2: Links Rápidos -->
+                <div>
+                    <h4 class="font-bold text-lg mb-6 text-yellow-400">Links Rápidos</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="index.html" class="hover:text-yellow-400 transition-colors">Home</a></li>
+                        <li><a href="sobre.html" class="hover:text-yellow-400 transition-colors">Sobre</a></li>
+                        <li><a href="cursos.html" class="hover:text-yellow-400 transition-colors">Cursos</a></li>
+                        <li><a href="equipe.html" class="hover:text-yellow-400 transition-colors">Equipe</a></li>
+                        <li><a href="contato.html" class="hover:text-yellow-400 transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Coluna 3: Contato -->
+                <!-- EDITE AQUI: Atualize as informações de contato -->
+                <div>
+                    <h4 class="font-bold text-lg mb-6 text-yellow-400">Contato</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mr-3 mt-1 text-yellow-400"></i>
+                            <span>(11) 1234-5678</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mr-3 mt-1 text-yellow-400"></i>
+                            <span>contato@escolawatech.com.br</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-3 mt-1 text-yellow-400"></i>
+                            <span>Rua Exemplo, 123</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Coluna 4: Redes Sociais -->
+                <!-- EDITE AQUI: Atualize os links das redes sociais -->
+                <div>
+                    <h4 class="font-bold text-lg mb-6 text-yellow-400">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all hover:scale-110" aria-label="Facebook">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition-all hover:scale-110" aria-label="Instagram">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-all hover:scale-110" aria-label="YouTube">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Linha de Copyright -->
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; 2024 Escola WATech. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         BOTÃO WHATSAPP FLUTUANTE
+         ============================================ -->
+    <!-- EDITE AQUI: Altere o número do WhatsApp (formato: 5511999999999 - sem parênteses, espaços ou hífens) -->
+    <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Escola%20WATech" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 transform hover:scale-110 transition-all z-50 animate-pulse hover:animate-none"
+       aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp text-3xl md:text-4xl"></i>
+    </a>
+
+    <!-- ============================================
+         SCRIPTS JAVASCRIPT
+         ============================================ -->
+    <script>
+        // Toggle do Menu Mobile
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+            
+            const icon = this.querySelector('i');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+        
+        // Fecha o menu mobile ao clicar em um link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.add('hidden');
+                const icon = document.querySelector('#mobileMenuBtn i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+        
+        // Formulário de Captação no Hero
+        const heroForm = document.getElementById('heroForm');
+        if (heroForm) {
+            heroForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const nome = document.getElementById('heroNome').value;
+                const telefone = document.getElementById('heroTelefone').value;
+                const btnText = document.getElementById('heroBtnText');
+                const btnLoading = document.getElementById('heroBtnLoading');
+                const submitBtn = document.getElementById('heroSubmitBtn');
+                const successMsg = document.getElementById('heroSuccess');
+                
+                // Validação básica
+                if (!nome || !telefone) {
+                    alert('Por favor, preencha todos os campos.');
+                    return;
+                }
+                
+                // Mostra loading
+                btnText.classList.add('hidden');
+                btnLoading.classList.remove('hidden');
+                submitBtn.disabled = true;
+                
+                // Simula envio (substitua por integração real)
+                setTimeout(() => {
+                    // Aqui você integraria com seu backend/API
+                    // Exemplo: fetch('/api/lead', { method: 'POST', body: JSON.stringify({nome, telefone}) })
+                    
+                    console.log('Lead capturado:', { nome, telefone });
+                    
+                    // Esconde formulário e mostra sucesso
+                    heroForm.classList.add('hidden');
+                    successMsg.classList.remove('hidden');
+                    
+                    // Redireciona para WhatsApp após 2 segundos (opcional)
+                    setTimeout(() => {
+                        window.open(`https://wa.me/5511999999999?text=Olá!%20Meu%20nome%20é%20${encodeURIComponent(nome)}.%20Gostaria%20de%20saber%20mais%20sobre%20a%20Escola%20WATech`, '_blank');
+                    }, 2000);
+                }, 1500);
+            });
+        }
+        
+        // Máscara para telefone (formato brasileiro)
+        const heroTelefone = document.getElementById('heroTelefone');
+        if (heroTelefone) {
+            heroTelefone.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length <= 11) {
+                    if (value.length <= 10) {
+                        value = value.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, '($1) $2-$3');
+                    } else {
+                        value = value.replace(/^(\d{2})(\d{5})(\d{0,4}).*/, '($1) $2-$3');
+                    }
+                    e.target.value = value;
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
+
