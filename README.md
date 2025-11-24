@@ -2,105 +2,19 @@
 
 Site estático completo para uma escola, desenvolvido com HTML e TailwindCSS, pronto para publicação no GitHub Pages.
 
-## 🚀 Como Rodar o Projeto Localmente
-
-### Opção 1: Usando npm (Recomendado) ⭐
+## 🚀 Como Rodar o Projeto
 
 ```bash
 # Navegue até a pasta do projeto
 cd C:\watechprojetos\EscolaWATech
-
-# Instale as dependências (opcional, mas recomendado na primeira vez)
-npm install
 
 # Inicie o servidor
 npm start
 ```
 
-Depois, acesse no navegador: **http://localhost:3000**
+Acesse no navegador: **http://localhost:3000**
 
 Para parar o servidor, pressione `Ctrl + C` no terminal.
-
----
-
-### Opção 2: Abrir Diretamente no Navegador (Mais Simples)
-
-1. Navegue até a pasta do projeto
-2. Clique duas vezes no arquivo `index.html`
-3. O site abrirá no seu navegador padrão
-
-**Nota:** Alguns recursos podem não funcionar corretamente ao abrir diretamente (como links relativos). Use um servidor local para melhor experiência.
-
----
-
-### Opção 3: Usando Python
-
-Se você tem Python instalado:
-
-#### Python 3.x:
-```bash
-# Navegue até a pasta do projeto
-cd C:\watechprojetos\EscolaWATech
-
-# Execute o servidor HTTP
-python -m http.server 8000
-```
-
-#### Python 2.x:
-```bash
-python -m SimpleHTTPServer 8000
-```
-
-Depois, acesse no navegador: **http://localhost:8000**
-
-Para parar o servidor, pressione `Ctrl + C` no terminal.
-
----
-
-### Opção 4: Usando Node.js (npx serve diretamente)
-
-Se você tem Node.js instalado:
-
-```bash
-# Navegue até a pasta do projeto
-cd C:\watechprojetos\EscolaWATech
-
-# Execute o servidor
-npx serve
-```
-
-Ou instale globalmente:
-```bash
-npm install -g serve
-serve
-```
-
-Depois, acesse no navegador: **http://localhost:3000**
-
----
-
-### Opção 5: Usando PHP
-
-Se você tem PHP instalado:
-
-```bash
-# Navegue até a pasta do projeto
-cd C:\watechprojetos\EscolaWATech
-
-# Execute o servidor
-php -S localhost:8000
-```
-
-Depois, acesse no navegador: **http://localhost:8000**
-
----
-
-### Opção 6: Usando Live Server (VS Code Extension)
-
-1. Instale a extensão **Live Server** no VS Code
-2. Clique com o botão direito no arquivo `index.html`
-3. Selecione **"Open with Live Server"**
-4. O site abrirá automaticamente no navegador
 
 ---
 
@@ -112,9 +26,12 @@ EscolaWATech/
 ├── sobre.html          # Página sobre a escola
 ├── cursos.html         # Página de cursos/níveis
 ├── equipe.html         # Página da equipe
+├── eventos.html        # Página de eventos
 ├── contato.html        # Página de contato
-├── components.js       # Componentes JavaScript compartilhados
+├── package.json        # Configuração npm
+├── .gitignore          # Arquivos ignorados pelo Git
 ├── CONFIGURACAO.md     # Guia de personalização
+├── MELHORIAS-CONVERSAO.md  # Melhorias implementadas
 └── README.md          # Este arquivo
 ```
 
@@ -135,7 +52,7 @@ Consulte o arquivo **CONFIGURACAO.md** para instruções detalhadas de personali
 ### Informações Principais para Editar:
 
 - **Nome da escola**: Procure por `Escola WATech` em todos os arquivos
-- **Contato**: Procure por `(11) 1234-5678` e `contato@escolawatech.com.br`
+- **Contato**: Procure por `+55 (22) 99974-1139` e `contato@watechevoce.com.br`
 - **WhatsApp**: Procure por `5511999999999`
 - **Endereço**: Procure por `Rua Exemplo, 123`
 

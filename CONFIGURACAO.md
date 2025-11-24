@@ -16,17 +16,17 @@ Este arquivo contém todas as informações que você precisa editar para person
 ## 📞 Informações de Contato
 
 ### Telefone
-- **Localização**: Procure por `(11) 1234-5678`
-- **Formato**: `(XX) XXXX-XXXX` ou `(XX) XXXXX-XXXX`
+- **Localização**: Procure por `+55 (22) 99974-1139`
+- **Formato**: `+XX (XX) XXXXX-XXXX` (formato internacional)
 
 ### WhatsApp
-- **Localização**: Procure por `5511999999999`
+- **Localização**: Procure por `5522999741139`
 - **Formato**: Código do país + DDD + número (sem espaços, parênteses ou hífens)
-- **Exemplo**: `5511999999999` (Brasil: 55, DDD: 11, Número: 999999999)
+- **Atual**: `5522999741139` (Brasil: 55, DDD: 22, Número: 999741139)
 
 ### E-mail
-- **Localização**: Procure por `contato@escolawatech.com.br`
-- **Substitua por**: Seu e-mail de contato
+- **Localização**: Procure por `contato@watechevoce.com.br`
+- **Atual**: `contato@watechevoce.com.br`
 
 ### Endereço
 - **Localização**: Procure por `Rua Exemplo, 123`

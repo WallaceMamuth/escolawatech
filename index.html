@@ -27,10 +27,30 @@
 <body class="bg-gray-50 antialiased">
 
     <!-- ============================================
+         BANNER PORTFÓLIO - Barra Superior
+         ============================================ -->
+    <!-- Banner fixo no topo indicando que é um portfólio (apenas na página principal) -->
+    <div class="fixed top-0 w-full bg-gradient-to-r from-blue-800 via-blue-900 to-blue-800 text-white py-3 z-50 border-b border-blue-700">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-2 text-center md:text-left">
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-star text-yellow-400 text-xl"></i>
+                    <div>
+                        <h3 class="font-bold text-lg">Portfólio WATech</h3>
+                        <p class="text-xs md:text-sm text-blue-200">
+                            Este layout é totalmente personalizável: incluímos, removemos ou adaptamos seções para que o site reflita a identidade e o posicionamento da sua empresa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
          NAVBAR - Navegação Principal
          ============================================ -->
-    <!-- Navbar fixa no topo com sombra suave e z-index alto para ficar sobre outros elementos -->
-    <nav class="fixed top-0 w-full bg-white shadow-lg z-50 backdrop-blur-sm bg-opacity-95">
+    <!-- Navbar fixa abaixo do banner com sombra suave e z-index alto -->
+    <nav class="fixed top-20 md:top-16 w-full bg-white shadow-lg z-40 backdrop-blur-sm bg-opacity-95">
         <div class="container mx-auto px-4 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <!-- Logo e Nome da Escola -->
@@ -46,6 +66,7 @@
                     <a href="sobre.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Sobre</a>
                     <a href="cursos.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Cursos</a>
                     <a href="equipe.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Equipe</a>
+                    <a href="eventos.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Eventos</a>
                     <a href="contato.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Contato</a>
                 </div>
                 
@@ -61,6 +82,7 @@
                 <a href="sobre.html" class="block py-3 text-gray-700 hover:text-blue-600 hover:pl-2 transition-all">Sobre</a>
                 <a href="cursos.html" class="block py-3 text-gray-700 hover:text-blue-600 hover:pl-2 transition-all">Cursos</a>
                 <a href="equipe.html" class="block py-3 text-gray-700 hover:text-blue-600 hover:pl-2 transition-all">Equipe</a>
+                <a href="eventos.html" class="block py-3 text-gray-700 hover:text-blue-600 hover:pl-2 transition-all">Eventos</a>
                 <a href="contato.html" class="block py-3 text-gray-700 hover:text-blue-600 hover:pl-2 transition-all">Contato</a>
             </div>
         </div>
@@ -69,8 +91,8 @@
     <!-- ============================================
          HERO SECTION - Seção Principal de Destaque
          ============================================ -->
-    <!-- Hero com gradiente azul premium e padding-top para compensar navbar fixa -->
-    <section class="pt-32 pb-20 md:pt-40 md:pb-24 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white relative overflow-hidden">
+    <!-- Hero com gradiente azul premium e padding-top para compensar navbar fixa + banner -->
+    <section class="pt-44 md:pt-40 pb-20 md:pb-24 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white relative overflow-hidden">
         <!-- Decoração de fundo sutil -->
         <div class="absolute inset-0 opacity-10">
             <div class="absolute top-10 left-10 w-72 h-72 bg-yellow-400 rounded-full blur-3xl"></div>
@@ -545,7 +567,7 @@
                    class="inline-block bg-yellow-400 text-gray-900 px-10 py-4 rounded-xl font-bold text-lg hover:bg-yellow-500 transform hover:scale-105 transition-all shadow-2xl hover:shadow-yellow-400/50 w-full sm:w-auto text-center">
                     <i class="fas fa-calendar-check mr-2"></i>Agende uma Visita
                 </a>
-                <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita%20à%20Escola%20WATech" 
+                <a href="https://wa.me/5522999741139?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita%20à%20Escola%20WATech" 
                    target="_blank"
                    class="inline-block bg-green-500 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-green-600 transform hover:scale-105 transition-all shadow-2xl w-full sm:w-auto text-center">
                     <i class="fab fa-whatsapp mr-2"></i>Falar no WhatsApp
@@ -579,6 +601,7 @@
                         <li><a href="sobre.html" class="hover:text-yellow-400 transition-colors">Sobre</a></li>
                         <li><a href="cursos.html" class="hover:text-yellow-400 transition-colors">Cursos</a></li>
                         <li><a href="equipe.html" class="hover:text-yellow-400 transition-colors">Equipe</a></li>
+                        <li><a href="eventos.html" class="hover:text-yellow-400 transition-colors">Eventos</a></li>
                         <li><a href="contato.html" class="hover:text-yellow-400 transition-colors">Contato</a></li>
                     </ul>
                 </div>
@@ -590,11 +613,11 @@
                     <ul class="space-y-3 text-gray-400">
                         <li class="flex items-start">
                             <i class="fas fa-phone mr-3 mt-1 text-yellow-400"></i>
-                            <span>(11) 1234-5678</span>
+                            <span>+55 (22) 99974-1139</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-envelope mr-3 mt-1 text-yellow-400"></i>
-                            <span>contato@escolawatech.com.br</span>
+                            <span>contato@watechevoce.com.br</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-map-marker-alt mr-3 mt-1 text-yellow-400"></i>
@@ -631,8 +654,8 @@
     <!-- ============================================
          BOTÃO WHATSAPP FLUTUANTE
          ============================================ -->
-    <!-- EDITE AQUI: Altere o número do WhatsApp (formato: 5511999999999 - sem parênteses, espaços ou hífens) -->
-    <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Escola%20WATech" 
+    <!-- EDITE AQUI: Altere o número do WhatsApp (formato: 5522999741139 - sem parênteses, espaços ou hífens) -->
+    <a href="https://wa.me/5522999741139?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Escola%20WATech" 
        target="_blank" 
        rel="noopener noreferrer"
        class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 transform hover:scale-110 transition-all z-50 animate-pulse hover:animate-none"
@@ -706,7 +729,7 @@
                     
                     // Redireciona para WhatsApp após 2 segundos (opcional)
                     setTimeout(() => {
-                        window.open(`https://wa.me/5511999999999?text=Olá!%20Meu%20nome%20é%20${encodeURIComponent(nome)}.%20Gostaria%20de%20saber%20mais%20sobre%20a%20Escola%20WATech`, '_blank');
+                        window.open(`https://wa.me/5522999741139?text=Olá!%20Meu%20nome%20é%20${encodeURIComponent(nome)}.%20Gostaria%20de%20saber%20mais%20sobre%20a%20Escola%20WATech`, '_blank');
                     }, 2000);
                 }, 1500);
             });

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eventos da Escola WATech - Conheça nossas celebrações, atividades cívicas, culturais e esportivas que fazem parte da nossa tradição educacional.">
+    <title>Eventos - Escola WATech</title>
+    
+    <!-- TailwindCSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Inter (tipografia moderna e legível) -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { 
+            font-family: 'Inter', sans-serif; 
+        }
+        * {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 antialiased">
+
+    <!-- ============================================
+         NAVBAR - Navegação Principal
+         ============================================ -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50 backdrop-blur-sm bg-opacity-95">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo e Nome da Escola -->
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <i class="fas fa-graduation-cap text-blue-600 text-3xl group-hover:scale-110 transition-transform"></i>
+                    <span class="text-2xl font-bold text-gray-800">Escola WATech</span>
+                </a>
+                
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Home</a>
+                    <a href="sobre.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Sobre</a>
+                    <a href="cursos.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Cursos</a>
+                    <a href="equipe.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Equipe</a>
+                    <a href="eventos.html" class="text-blue-600 font-semibold border-b-2 border-blue-600 pb-1">Eventos</a>
+                    <a href="contato.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Contato</a>
+                </div>
+                
+                <!-- Botão Menu Mobile -->
+                <button class="md:hidden text-gray-700 hover:text-blue-600 transition-colors" id="mobileMenuBtn" aria-label="Abrir menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Menu Mobile -->
+            <div class="hidden md:hidden pb-4 border-t border-gray-200 mt-2" id="mobileMenu">
+                <a href="index.html" class="block py-3 text-gray-700 hover:text-blue-600 hover:pl-2 transition-all">Home</a>
+                <a href="sobre.html" class="block py-3 text-gray-700 hover:text-blue-600 hover:pl-2 transition-all">Sobre</a>
+                <a href="cursos.html" class="block py-3 text-gray-700 hover:text-blue-600 hover:pl-2 transition-all">Cursos</a>
+                <a href="equipe.html" class="block py-3 text-gray-700 hover:text-blue-600 hover:pl-2 transition-all">Equipe</a>
+                <a href="eventos.html" class="block py-3 text-blue-600 font-semibold border-l-4 border-blue-600 pl-4">Eventos</a>
+                <a href="contato.html" class="block py-3 text-gray-700 hover:text-blue-600 hover:pl-2 transition-all">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION - Seção Principal
+         ============================================ -->
+    <section class="pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white relative overflow-hidden">
+        <!-- Decoração de fundo -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-72 h-72 bg-yellow-400 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-blue-400 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 lg:px-8 text-center relative z-10">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Nossos Eventos</h1>
+            <p class="text-xl md:text-2xl text-blue-100 max-w-2xl mx-auto">
+                Celebrações, atividades cívicas e culturais que fazem parte da nossa tradição educacional
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO EVENTOS EM DESTAQUE
+         ============================================ -->
+    <!-- Eventos principais da escola -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">Eventos em Destaque</h2>
+                <div class="w-32 h-1.5 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <!-- Grid de Eventos -->
+            <div class="grid md:grid-cols-3 gap-8 lg:gap-10 max-w-7xl mx-auto">
+                <!-- Evento 1: Páscoa -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all border border-gray-100">
+                    <!-- Imagem do Evento (placeholder - substitua por imagem real) -->
+                    <div class="h-64 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-20">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-white rounded-full -mr-16 -mt-16"></div>
+                        </div>
+                        <i class="fas fa-egg text-white text-6xl relative z-10"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">
+                                <i class="fas fa-calendar-alt mr-1"></i>Março/Abril
+                            </span>
+                            <span class="text-gray-500 text-sm">
+                                <i class="fas fa-users mr-1"></i>Todos os Níveis
+                            </span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Nossa Páscoa</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Celebração especial com atividades lúdicas, caça aos ovos, apresentações e momentos de reflexão sobre valores e solidariedade.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 text-lg mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span>Atividades temáticas por faixa etária</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 text-lg mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span>Apresentações artísticas dos alunos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 text-lg mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span>Momento de reflexão e valores</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Evento 2: 7 de Setembro -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all border border-gray-100">
+                    <div class="h-64 bg-gradient-to-br from-green-500 via-green-600 to-green-700 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-20">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-white rounded-full -mr-16 -mt-16"></div>
+                        </div>
+                        <i class="fas fa-flag text-white text-6xl relative z-10"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">
+                                <i class="fas fa-calendar-alt mr-1"></i>Setembro
+                            </span>
+                            <span class="text-gray-500 text-sm">
+                                <i class="fas fa-users mr-1"></i>Todos os Níveis
+                            </span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">7 de Setembro</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Desfile cívico e apresentações que celebram a independência do Brasil, desenvolvendo o patriotismo e o amor à pátria.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 text-lg mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span>Desfile cívico com fanfarra</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 text-lg mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span>Apresentações sobre história do Brasil</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 text-lg mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span>Valorização da cultura nacional</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Evento 3: Fim de Ano -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all border border-gray-100">
+                    <div class="h-64 bg-gradient-to-br from-red-500 via-red-600 to-red-700 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-20">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-white rounded-full -mr-16 -mt-16"></div>
+                        </div>
+                        <i class="fas fa-gift text-white text-6xl relative z-10"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full">
+                                <i class="fas fa-calendar-alt mr-1"></i>Dezembro
+                            </span>
+                            <span class="text-gray-500 text-sm">
+                                <i class="fas fa-users mr-1"></i>Todos os Níveis
+                            </span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Festa de Fim de Ano</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Grande celebração de encerramento do ano letivo com formatura, apresentações, premiações e confraternização.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 text-lg mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span>Cerimônia de formatura</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 text-lg mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span>Apresentações artísticas e culturais</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 text-lg mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span>Premiação de destaques do ano</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO CALENDÁRIO ANUAL DE EVENTOS
+         ============================================ -->
+    <!-- Timeline com todos os eventos do ano -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">Calendário Anual de Eventos</h2>
+                <div class="w-32 h-1.5 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto rounded-full"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+                    Conheça todos os eventos que fazem parte do calendário escolar e enriquecem a formação dos nossos alunos
+                </p>
+            </div>
+            
+            <!-- Timeline de Eventos -->
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-8">
+                    <!-- Evento: Volta às Aulas -->
+                    <div class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100">
+                        <div class="flex-shrink-0 w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                            Fev
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Volta às Aulas</h3>
+                            <p class="text-gray-600 mb-3">Recepção calorosa aos alunos com atividades de integração e acolhimento para iniciar o ano letivo com entusiasmo.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Integração</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Acolhimento</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Evento: Páscoa -->
+                    <div class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100">
+                        <div class="flex-shrink-0 w-24 h-24 bg-yellow-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                            Mar/Abr
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Nossa Páscoa</h3>
+                            <p class="text-gray-600 mb-3">Celebração especial com atividades lúdicas, reflexões sobre valores e momentos de solidariedade.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">Religioso</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">Valores</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Evento: Dia das Mães -->
+                    <div class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100">
+                        <div class="flex-shrink-0 w-24 h-24 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                            Mai
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Dia das Mães</h3>
+                            <p class="text-gray-600 mb-3">Homenagem especial às mães com apresentações, exposições de trabalhos e momentos de carinho preparados pelos alunos.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-pink-100 text-pink-800 text-xs font-semibold px-3 py-1 rounded-full">Família</span>
+                                <span class="bg-pink-100 text-pink-800 text-xs font-semibold px-3 py-1 rounded-full">Homenagem</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Evento: Festa Junina -->
+                    <div class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100">
+                        <div class="flex-shrink-0 w-24 h-24 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                            Jun
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Festa Junina</h3>
+                            <p class="text-gray-600 mb-3">Arraial tradicional com quadrilhas, comidas típicas, brincadeiras e valorização da cultura popular brasileira.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-3 py-1 rounded-full">Cultural</span>
+                                <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-3 py-1 rounded-full">Tradição</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Evento: Dia dos Pais -->
+                    <div class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100">
+                        <div class="flex-shrink-0 w-24 h-24 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                            Ago
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Dia dos Pais</h3>
+                            <p class="text-gray-600 mb-3">Celebração dedicada aos pais com apresentações, atividades interativas e momentos especiais de convivência.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Família</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Homenagem</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Evento: 7 de Setembro -->
+                    <div class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100">
+                        <div class="flex-shrink-0 w-24 h-24 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                            Set
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">7 de Setembro</h3>
+                            <p class="text-gray-600 mb-3">Desfile cívico e apresentações que celebram a independência do Brasil, desenvolvendo patriotismo e cidadania.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Cívico</span>
+                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Patriotismo</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Evento: Dia das Crianças -->
+                    <div class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100">
+                        <div class="flex-shrink-0 w-24 h-24 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                            Out
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Dia das Crianças</h3>
+                            <p class="text-gray-600 mb-3">Dia especial repleto de brincadeiras, gincanas, atividades recreativas e muita diversão para celebrar nossas crianças.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">Recreação</span>
+                                <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">Diversão</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Evento: Fim de Ano -->
+                    <div class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100">
+                        <div class="flex-shrink-0 w-24 h-24 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                            Dez
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Festa de Fim de Ano</h3>
+                            <p class="text-gray-600 mb-3">Grande celebração de encerramento com formatura, apresentações, premiações e confraternização de toda a comunidade escolar.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full">Formatura</span>
+                                <span class="bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full">Confraternização</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO GALERIA DE FOTOS
+         ============================================ -->
+    <!-- Galeria com fotos dos eventos (placeholders) -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">Galeria de Eventos</h2>
+                <div class="w-32 h-1.5 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto rounded-full"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+                    Momentos especiais registrados em nossos eventos e celebrações
+                </p>
+            </div>
+            
+            <!-- Grid de Fotos -->
+            <!-- EDITE AQUI: Substitua os placeholders por fotos reais dos eventos -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
+                <!-- Foto 1 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all">
+                    <div class="h-64 bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center">
+                        <i class="fas fa-image text-white text-4xl opacity-50"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-blue-600 bg-opacity-0 group-hover:bg-opacity-80 transition-all flex items-center justify-center">
+                        <p class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity text-center px-4">
+                            Páscoa 2024
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Foto 2 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all">
+                    <div class="h-64 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center">
+                        <i class="fas fa-image text-white text-4xl opacity-50"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-blue-600 bg-opacity-0 group-hover:bg-opacity-80 transition-all flex items-center justify-center">
+                        <p class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity text-center px-4">
+                            7 de Setembro
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Foto 3 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all">
+                    <div class="h-64 bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
+                        <i class="fas fa-image text-white text-4xl opacity-50"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-blue-600 bg-opacity-0 group-hover:bg-opacity-80 transition-all flex items-center justify-center">
+                        <p class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity text-center px-4">
+                            Fim de Ano
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Foto 4 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all">
+                    <div class="h-64 bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center">
+                        <i class="fas fa-image text-white text-4xl opacity-50"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-blue-600 bg-opacity-0 group-hover:bg-opacity-80 transition-all flex items-center justify-center">
+                        <p class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity text-center px-4">
+                            Festa Junina
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Foto 5 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all">
+                    <div class="h-64 bg-gradient-to-br from-pink-500 to-pink-700 flex items-center justify-center">
+                        <i class="fas fa-image text-white text-4xl opacity-50"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-blue-600 bg-opacity-0 group-hover:bg-opacity-80 transition-all flex items-center justify-center">
+                        <p class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity text-center px-4">
+                            Dia das Mães
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Foto 6 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all">
+                    <div class="h-64 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+                        <i class="fas fa-image text-white text-4xl opacity-50"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-blue-600 bg-opacity-0 group-hover:bg-opacity-80 transition-all flex items-center justify-center">
+                        <p class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity text-center px-4">
+                            Dia dos Pais
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Foto 7 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all">
+                    <div class="h-64 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
+                        <i class="fas fa-image text-white text-4xl opacity-50"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-blue-600 bg-opacity-0 group-hover:bg-opacity-80 transition-all flex items-center justify-center">
+                        <p class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity text-center px-4">
+                            Dia das Crianças
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Foto 8 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all">
+                    <div class="h-64 bg-gradient-to-br from-indigo-500 to-indigo-700 flex items-center justify-center">
+                        <i class="fas fa-image text-white text-4xl opacity-50"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-blue-600 bg-opacity-0 group-hover:bg-opacity-80 transition-all flex items-center justify-center">
+                        <p class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity text-center px-4">
+                            Volta às Aulas
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CTA SECTION
+         ============================================ -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-yellow-400 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-400 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 lg:px-8 text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Participe dos Nossos Eventos</h2>
+            <p class="text-xl md:text-2xl mb-10 text-blue-100 max-w-2xl mx-auto">
+                Venha fazer parte da nossa comunidade e vivenciar momentos inesquecíveis
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contato.html" 
+                   class="inline-block bg-yellow-400 text-gray-900 px-10 py-4 rounded-xl font-bold text-lg hover:bg-yellow-500 transform hover:scale-105 transition-all shadow-2xl hover:shadow-yellow-400/50">
+                    <i class="fas fa-calendar-check mr-2"></i>Entre em Contato
+                </a>
+                <a href="https://wa.me/5522999741139?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20eventos%20da%20Escola%20WATech" 
+                   target="_blank"
+                   class="inline-block bg-green-500 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-green-600 transform hover:scale-105 transition-all shadow-2xl">
+                    <i class="fab fa-whatsapp mr-2"></i>Falar no WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER - Rodapé
+         ============================================ -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <i class="fas fa-graduation-cap text-yellow-400 text-3xl"></i>
+                        <span class="text-2xl font-bold">Escola WATech</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">Educação de excelência formando cidadãos preparados para o futuro.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-6 text-yellow-400">Links Rápidos</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="index.html" class="hover:text-yellow-400 transition-colors">Home</a></li>
+                        <li><a href="sobre.html" class="hover:text-yellow-400 transition-colors">Sobre</a></li>
+                        <li><a href="cursos.html" class="hover:text-yellow-400 transition-colors">Cursos</a></li>
+                        <li><a href="equipe.html" class="hover:text-yellow-400 transition-colors">Equipe</a></li>
+                        <li><a href="eventos.html" class="hover:text-yellow-400 transition-colors">Eventos</a></li>
+                        <li><a href="contato.html" class="hover:text-yellow-400 transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-6 text-yellow-400">Contato</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mr-3 mt-1 text-yellow-400"></i>
+                            <span>+55 (22) 99974-1139</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mr-3 mt-1 text-yellow-400"></i>
+                            <span>contato@watechevoce.com.br</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-3 mt-1 text-yellow-400"></i>
+                            <span>Rua Exemplo, 123</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-6 text-yellow-400">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all hover:scale-110" aria-label="Facebook">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition-all hover:scale-110" aria-label="Instagram">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-all hover:scale-110" aria-label="YouTube">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; 2024 Escola WATech. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         BOTÃO WHATSAPP FLUTUANTE
+         ============================================ -->
+    <a href="https://wa.me/5522999741139?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20eventos%20da%20Escola%20WATech" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 transform hover:scale-110 transition-all z-50 animate-pulse hover:animate-none"
+       aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp text-3xl md:text-4xl"></i>
+    </a>
+
+    <!-- ============================================
+         SCRIPTS JAVASCRIPT
+         ============================================ -->
+    <script>
+        // Toggle do Menu Mobile
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+            
+            const icon = this.querySelector('i');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+        
+        // Fecha o menu mobile ao clicar em um link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.add('hidden');
+                const icon = document.querySelector('#mobileMenuBtn i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+    </script>
+</body>
+</html>
+
